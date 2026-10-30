@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-hind), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  font-family: var(--font-hind), sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-digital {
+  font-family: var(--font-orbitron), var(--font-hind), monospace;
+}
+
+/* Islamic emerald dark glass aesthetics */
+.emerald-card {
+  background: linear-gradient(145deg, rgba(7, 30, 24, 0.75) 0%, rgba(3, 17, 14, 0.85) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.emerald-card-inner {
+  background: rgba(2, 18, 14, 0.6);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #020d0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f3d32;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
 }
